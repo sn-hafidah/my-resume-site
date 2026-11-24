@@ -1,0 +1,246 @@
+
+/* General Styles */
+:root {
+    --ink: #20283a;
+    --muted: #667085;
+    --accent: #6558d3;
+    --accent-dark: #4d42b2;
+    --surface: #ffffff;
+    --background: #f4f5fb;
+    --border: #e5e7f0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.65;
+    color: var(--ink);
+    background: var(--background);
+}
+
+/* Header and Navigation */
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 5%;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+}
+
+.brand {
+    color: var(--ink);
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+}
+
+nav a {
+    color: var(--muted);
+    text-decoration: none;
+    padding: 0.55rem 0.8rem;
+    border-radius: 0.65rem;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--accent-dark);
+    background: #eeecff;
+}
+
+/* Main Container */
+.container {
+    width: min(1080px, 90%);
+    margin: 2.5rem auto;
+}
+
+/* Cards */
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 1.2rem;
+    padding: 2rem;
+    margin-bottom: 1.25rem;
+    box-shadow: 0 8px 24px rgba(34, 40, 70, 0.04);
+}
+
+/* Home Page Hero Section */
+.hero {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem;
+}
+
+.profile-image {
+    width: 180px;
+    max-width: 100%;
+    border-radius: 50%;
+    background: #eeecff;
+}
+
+/* Headings and Text */
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    letter-spacing: -0.04em;
+    margin: 0.25rem 0 0.8rem;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+h3 {
+    margin-bottom: 0.4rem;
+}
+
+.lead {
+    font-size: 1.15rem;
+    color: var(--muted);
+    max-width: 650px;
+}
+
+.eyebrow {
+    color: var(--accent-dark);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.13em;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.7rem 1rem;
+    border-radius: 0.7rem;
+    color: #ffffff;
+    background: var(--accent);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.button:hover {
+    background: var(--accent-dark);
+}
+
+.button.secondary {
+    color: var(--accent-dark);
+    background: #eeecff;
+}
+
+/* Skills List */
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    padding: 0;
+    list-style: none;
+}
+
+.tag-list li {
+    padding: 0.45rem 0.8rem;
+    background: #f0efff;
+    color: #433b9c;
+    border-radius: 999px;
+}
+
+/* Hobbies Page */
+.page-heading {
+    margin-bottom: 1.5rem;
+}
+
+.page-heading p:last-child {
+    color: var(--muted);
+}
+
+.hobby-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.hobby-card {
+    margin: 0;
+}
+
+.hobby-icon {
+    font-size: 2rem;
+    margin-bottom: 0.6rem;
+}
+
+/* Contact Page */
+.contact-list {
+    padding-left: 1.25rem;
+}
+
+.contact-list li {
+    margin: 0.7rem 0;
+}
+
+.contact-list a {
+    color: var(--accent-dark);
+    text-decoration: none;
+}
+
+.contact-list a:hover {
+    text-decoration: underline;
+}
+
+/* Notes */
+.note {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 680px) {
+    .site-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .profile-image {
+        width: 140px;
+        margin: auto;
+    }
+
+    .hobby-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 1.25rem;
+    }
+}
